@@ -1,4 +1,7 @@
-<section>
+<section class="top" (click)="this.toggleSearchBar()" >
     <i class="material-icons">menu</i>
     <i class="material-icons">more_vert</i>
+</section>
+<section [ngClass]="{bottom: true, opened: this.isOpened}" class="bottom">
+    <input type="search" name="search" id="searchbar">
 </section>
