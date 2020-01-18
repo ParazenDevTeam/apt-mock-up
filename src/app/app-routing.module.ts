@@ -5,15 +5,9 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
   {
-    path: '**',
-    redirectTo: '/home',
-    pathMatch: 'full',
-  },
-  {
     path: 'home',
     component: HomePageComponent,
-    data: { title: 'Home Page' },
-    pathMatch: 'full',
+    data: { title: 'Home Page' }
   },
 ];
 
