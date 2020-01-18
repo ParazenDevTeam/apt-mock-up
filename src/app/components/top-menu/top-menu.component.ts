@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
+  isOpened: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleSearchBar() {
+    this.isOpened = !this.isOpened;
   }
 
 }
