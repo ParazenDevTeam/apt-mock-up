@@ -1,12 +1,7 @@
-<app-top-menu></app-top-menu>
+<app-top-menu #searchBar></app-top-menu>
 
-<div id="page-wrapper">
-    <!-- <section id="placeholder">
-        <p>Add products to follow</p>
-        <p>Start searching now!</p>
-    </section> -->
-    
+<div id="page-wrapper">    
     <section id="search-button">
-        <button><i class="material-icons">search</i></button>
+        <button (click)="this.searchBar.toggleSearchBar()"><i class="material-icons">search</i></button>
     </section>
 </div>
