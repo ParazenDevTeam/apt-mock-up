@@ -7,15 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
-  isOpened: boolean = false;
+  menu: any[] = [
+    'Search',
+    'Watchlist',
+    'Settings'
+  ]
+
+  menuIsOpen: Boolean = false;
+
+  activePage: String = this.menu[0];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleSearchBar() {
-    this.isOpened = !this.isOpened;
+  toggle(): Boolean {
+    this.menuIsOpen = !this.menuIsOpen;
+    return this.menuIsOpen;
+  }
+
+  get menu_state(): any {
+    return {
+      'menu-opened': this.menuIsOpen,
+      'menu-closed': !this.menuIsOpen
+    }
+  }
+
+  changePage(page: String) {
+    this.activePage = page;
+    this.toggle();
   }
 
 }
