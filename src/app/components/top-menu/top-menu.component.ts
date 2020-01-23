@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router, Routes } from '@angular/router';
+
 
 @Component({
   selector: 'app-top-menu',
@@ -7,22 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
-  menu: any[] = [
-    'Search',
-    'Watchlist',
-    'Settings'
-  ]
+  @Input() pages: Routes;
 
-  menuIsOpen: Boolean = false;
+  menuIsOpen: boolean = false;
+  activePage: string = '';
 
-  activePage: String = this.menu[0];
-
-  constructor() { }
+  constructor(public route: ActivatedRoute, public router: Router) {
+    this.activePage = route.snapshot.url.join('');
+    this.pages = this.router.config;
+  }
 
   ngOnInit() {
   }
 
-  toggle(): Boolean {
+  toggle(): boolean {
     this.menuIsOpen = !this.menuIsOpen;
     return this.menuIsOpen;
   }
@@ -34,8 +34,8 @@ export class TopMenuComponent implements OnInit {
     }
   }
 
-  changePage(page: String) {
-    this.activePage = page;
+  changePage(page: string) {
+    this.router.navigateByUrl(page)
     this.toggle();
   }
 

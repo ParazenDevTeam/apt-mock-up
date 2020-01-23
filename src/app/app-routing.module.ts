@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'search',
     component: SearchPageComponent,
     pathMatch: 'full',
-    data: { title: 'Search products' }
+    data: { title: 'Search' }
   },
   {
     path: 'home',
