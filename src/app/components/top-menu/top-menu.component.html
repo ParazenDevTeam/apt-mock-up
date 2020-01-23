@@ -1,7 +1,15 @@
-<section class="top" (click)="this.toggleSearchBar()" >
-    <i class="material-icons">menu</i>
-    <i class="material-icons">more_vert</i>
+<section class="top">
+    <i (click)="this.toggle()" class="material-icons">menu</i>
+    <!-- <input type="text" name="search" id="search" placeholder="Search for products"> -->
+    <span>{{this.activePage}}</span>
+    <i class="material-icons">
+        supervised_user_circle
+    </i>
 </section>
-<section [ngClass]="{bottom: true, opened: this.isOpened}" class="bottom">
-    <input type="search" name="search" id="searchbar">
+<section [ngClass]="this.menu_state">
+    <ul>
+        <li *ngFor="let entry of this.menu" (click)="this.changePage(entry)">
+            <span>{{entry}}</span>
+        </li>
+    </ul>
 </section>
