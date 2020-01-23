@@ -7,8 +7,13 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
+    pathMatch: 'full',
     data: { title: 'Home Page' }
   },
+  {
+    path: '**',
+    redirectTo: '/home'
+  }
 ];
 
 @NgModule({

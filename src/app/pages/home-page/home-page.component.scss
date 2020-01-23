@@ -6,7 +6,7 @@ div#page-wrapper {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #f7f7f7;
+    background-color: #F6F8FA;
 
     #placeholder {
         p {
@@ -28,7 +28,8 @@ div#page-wrapper {
         
         button {
             width: 90%;
-            background-color: #44bd32;
+            background-color: #28a745;
+            background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
             border-radius: 3px;
             outline: none;
             border: unset;
@@ -39,6 +40,12 @@ div#page-wrapper {
             i {
                 color: white;
             }
+        }
+        button:hover {
+            background-color: #269f42;
+            background-image: linear-gradient(-180deg,#2fcb53,#269f42 90%);
+            background-position: -.5em;
+            border-color: rgba(27,31,35,.5);
         }
     }
 }
