@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TopMenuComponent } from 'src/app/components/top-menu/top-menu.component';
+import { SideMenuComponent } from 'src/app/components/side-menu/side-menu.component';
 
 @Component({
   selector: 'app-home-page',
@@ -10,9 +10,16 @@ export class HomePageComponent implements OnInit {
 
   constructor() { }
 
-  @ViewChild('searchBar', null) searchBar: TopMenuComponent;
+  @ViewChild('searchBar', null) searchBar: SideMenuComponent;
 
   ngOnInit() {
+  }
+
+  get hideSearchButton(): any {
+    return {
+      "hide" : this.searchBar.menuIsOpen,
+      "visible" : !this.searchBar.menuIsOpen
+    }
   }
 
 }

@@ -1,0 +1,16 @@
+<section class="top">
+  <i (click)="this.toggle()" class="material-icons">menu</i>
+  <!-- <input type="text" name="search" id="search" placeholder="Search for products"> -->
+  <span>{{this.activePage}}</span>
+  <i class="material-icons">
+      supervised_user_circle
+  </i>
+</section>
+<section id="mySidenav" [ngClass]="this.menu_state">
+  <a href="javascript:void(0)" class="closebtn" (click)="this.toggle()">&times;</a>
+  <ul>
+    <li *ngFor="let page of this.pages" (click)="this.changePage(page.path)">
+        <span>{{page.data?.title}}</span>
+    </li>
+</ul>
+</section>

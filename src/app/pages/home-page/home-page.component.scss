@@ -25,7 +25,7 @@ div#page-wrapper {
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
         button {
             width: 90%;
             background-color: #28a745;
@@ -48,4 +48,34 @@ div#page-wrapper {
             border-color: rgba(27,31,35,.5);
         }
     }
+
+    #search-button.hide {
+      animation-duration: 0.5s;
+      animation-name: "hide-search-button";
+      bottom: -10%;
+    }
+
+    #search-button.visible {
+      animation-duration: 0.5s;
+      animation-name: "visible-search-button";
+    }
+}
+
+@keyframes hide-search-button {
+  0% {
+    bottom: 3%;
+  }
+
+  100% {
+    bottom: -10%;
+  }
+}
+@keyframes visible-search-button {
+  100% {
+    bottom: 3%;
+  }
+
+  0% {
+    bottom: -10%;
+  }
 }

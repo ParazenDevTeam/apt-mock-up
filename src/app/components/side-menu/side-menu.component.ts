@@ -1,13 +1,12 @@
+import { Routes, ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Router, Routes } from '@angular/router';
-
 
 @Component({
-  selector: 'app-top-menu',
-  templateUrl: './top-menu.component.html',
-  styleUrls: ['./top-menu.component.scss']
+  selector: 'app-side-menu',
+  templateUrl: './side-menu.component.html',
+  styleUrls: ['./side-menu.component.scss']
 })
-export class TopMenuComponent implements OnInit {
+export class SideMenuComponent implements OnInit {
 
   @Input() pages: Routes;
 
@@ -29,8 +28,8 @@ export class TopMenuComponent implements OnInit {
 
   get menu_state(): any {
     return {
-      'menu-opened': this.menuIsOpen,
-      'menu-closed': !this.menuIsOpen
+      'sidenav-opened': this.menuIsOpen,
+      'sidenav-closed': !this.menuIsOpen
     }
   }
 

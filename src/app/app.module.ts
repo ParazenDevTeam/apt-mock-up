@@ -4,15 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    TopMenuComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,
