@@ -1,12 +1,12 @@
-import { Routes, ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
+import { Routes, ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-side-menu',
-  templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.scss']
+  selector: 'app-tabs-menu',
+  templateUrl: './tabs-menu.component.html',
+  styleUrls: ['./tabs-menu.component.scss']
 })
-export class SideMenuComponent implements OnInit {
+export class TabsMenuComponent implements OnInit {
 
   @Input() pages: Routes;
 
@@ -26,15 +26,9 @@ export class SideMenuComponent implements OnInit {
     return this.menuIsOpen;
   }
 
-  get menu_state(): any {
-    return {
-      'sidenav-opened': this.menuIsOpen,
-      'sidenav-closed': !this.menuIsOpen
-    }
-  }
-
   changePage(page: string) {
     this.router.navigateByUrl(page)
+    console.log(page);
     this.toggle();
   }
 

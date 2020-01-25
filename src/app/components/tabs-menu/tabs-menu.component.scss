@@ -29,7 +29,7 @@ section.top {
   input#search {
       width: 100%;
       padding: 6px;
-      margin-right: 10px;
+      margin: 0 10px;
       border-radius: 5px;
       background-color: #3F4448;
       border: unset;
@@ -43,53 +43,35 @@ section.top {
   }
 
 }
-.sidenav-closed,
-.sidenav-opened {
-  height: 100%;
-  width: 0;
+.navbar {
+  background-color: #24292E;
+  overflow: hidden;
   position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color:  #24292E;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  z-index: 100;
 
-  a, ul li {
-    padding: 8px 0;
+  /* Style the links inside the navigation bar */
+  a {
+    float: left;
+    padding: 12px;
+    color: whitesmoke;
     text-decoration: none;
-    font-size: 18px;
-    color: #F6F8FA;
-    display: block;
-    transition: 0.3s;
+    font-size: 17px;
+    width: 100%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center;
   }
 
-  ul li:hover {
-    color: #f1f1f1;
+  /* Change the color of links on hover */
+  a:hover {
+    background-color: whitesmoke;
+    color: black;
   }
 
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  /* Add a color to the active/current link */
+  a.active {
+    background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+    color: whitesmoke;
   }
-}
-
-.sidenav-opened {
-  width: 150px;
-}
-
-
-@media screen and (max-height: 450px) {
-  .sidenav-opened {
-    padding-top: 15px;
-
-    a {
-      font-size: 18px;
-    }
-  }
-
 }

@@ -52,51 +52,22 @@ div#page-wrapper {
 
   }
 
-  #search-button.hide {
-    animation-duration: 0.5s;
-    animation-name: "hide-search-button";
-    bottom: -10%;
-  }
+  // #search-button.hide {
+  //   animation-duration: 0.5s;
+  //   animation-name: "hide-search-button";
+  //   bottom: -10%;
+  // }
 
-  #search-button.visible {
-    animation-duration: 0.5s;
-    animation-name: "visible-search-button";
-  }
+  // #search-button.visible {
+  //   animation-duration: 0.5s;
+  //   animation-name: "visible-search-button";
+  // }
 
   app-result-list {
     width: 100%;
     height: 100%;
     margin: 64px 0px 80px;
     position: fixed;
-
-    &.hide{
-      transform: translatex(150px);
-      transition: 0.5s;
-    }
-    &.visible {
-      transform: translatex(0px);
-      transition: 0.5s;
-    }
   }
 
-}
-
-@keyframes hide-search-button {
-  0% {
-    bottom: 3%;
-  }
-
-  100% {
-    bottom: -10%;
-  }
-}
-
-@keyframes visible-search-button {
-  100% {
-    bottom: 3%;
-  }
-
-  0% {
-    bottom: -10%;
-  }
 }

@@ -9,13 +9,20 @@ const routes: Routes = [
     path: 'search',
     component: SearchPageComponent,
     pathMatch: 'full',
-    data: { title: 'Search' }
+    data: { title: 'Search', icon: 'search' }
   },
   {
     path: 'home',
     component: HomePageComponent,
     pathMatch: 'full',
-    data: { title: 'Home' }
+    data: { title: 'Home', icon: 'home' }
+  },
+  //Example for tabs navigation *NOT FUNCTIONAL*
+  {
+    path: 'wish',
+    component: HomePageComponent,
+    pathMatch: 'full',
+    data: { title: 'Wish List', icon: 'loyalty' }
   },
   {
     path: '**',
