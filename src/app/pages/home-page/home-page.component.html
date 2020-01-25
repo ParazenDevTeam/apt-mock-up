@@ -1,6 +1,7 @@
 <app-side-menu #searchBar></app-side-menu>
 
 <div id="page-wrapper">
+    <app-result-list #resultList [ngClass]="this.hideSearchButton"></app-result-list>
     <section id="search-button" [ngClass]="this.hideSearchButton">
         <button><i class="material-icons">search</i></button>
     </section>

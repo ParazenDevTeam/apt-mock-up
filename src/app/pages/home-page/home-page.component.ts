@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SideMenuComponent } from 'src/app/components/side-menu/side-menu.component';
+import { ResultListComponent } from 'src/app/components/result-list/result-list.component';
 
 @Component({
   selector: 'app-home-page',
@@ -11,6 +12,7 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   @ViewChild('searchBar', null) searchBar: SideMenuComponent;
+  @ViewChild('resultList', null) resultList: ResultListComponent;
 
   ngOnInit() {
   }

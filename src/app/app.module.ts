@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { ResultListComponent } from './components/result-list/result-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     SearchPageComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    ResultListComponent
   ],
   imports: [
     BrowserModule,

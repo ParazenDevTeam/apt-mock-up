@@ -1,0 +1,26 @@
+<section id="result-list">
+  <ul>
+      <li *ngFor="let item of this.products">
+        <section class="left">
+          <img [src]="item.image">
+        </section>
+        <section class="right">
+          <div class="product-info">
+            <header>
+              <span>{{item.name}}</span>
+            </header>
+            <div class="card-body">
+              <span>{{item.price}}€</span>
+            </div>
+          </div>
+          <div class="shopping-btn">
+            <button>
+              <i class="material-icons">
+                add_shopping_cart
+              </i>
+            </button>
+          </div>
+        </section>
+      </li>
+  </ul>
+</section>
