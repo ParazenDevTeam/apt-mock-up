@@ -1,9 +1,12 @@
-<section class="top">
-  <input type="text" name="search" id="search" placeholder="Search for products">
-  <i class="material-icons">filter_list</i>
+<section [ngClass]="['top', this.theme]">
+  <div class="input-icons">
+    <i class="material-icons">search</i>
+    <input type="text" name="search" id="search" placeholder="Search for products">
+  </div>
+  <i class="material-icons" (click)="this.toogleTheme()">filter_list</i>
 </section>
 
-<section class="navbar">
+<section [ngClass]="['navbar', this.theme]">
   <ng-container *ngFor="let page of this.pages">
     <a *ngIf="page.data?.title" (click)="this.changePage(page.path)"
       [className]="(this.activePage == page.path) ? 'active' : 'inactive'">

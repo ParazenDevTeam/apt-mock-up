@@ -11,41 +11,67 @@ section.top {
   align-items: center;
   justify-content: space-between;
 
-  background-color: #24292E;
+  background-color: #f3f3f3;
 
   i {
-      margin: 0 10px;
-      font-size: 27px;
-      color: #F6F8FA;
-      cursor: pointer;
+    margin: 0 10px;
+    font-size: 27px;
+    color: #3F4448;
+    cursor: pointer;
   }
 
   span {
-      color: #F6F8FA;
-      text-transform: uppercase;
-      font-weight: 600;
+    color: #F6F8FA;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 
-  input#search {
+  div.input-icons {
+    width: 100%;
+    margin-right: 85px;
+
+    i {
+      position: absolute;
+      font-size: 20px;
+      padding: 3px 5px;
+    }
+
+    input#search {
       width: 100%;
-      padding: 6px;
+      padding: 6px 30px;
       margin: 0 10px;
       border-radius: 5px;
-      background-color: #3F4448;
+      background-color: #d6d6d6;
+      color: #24292E;
       border: unset;
-      color: #F6F8FA;
       outline: none;
       transition: 50ms box-shadow ease-in-out;
+    }
+
+    input#search:focus {
+      box-shadow: 0px 0px 1px 2px #2f3640;
+    }
   }
 
-  input#search:focus {
-      box-shadow: 0px 0px 1px 2px #2f3640;
+  &.dark {
+    background-color: #24292E;
+
+    i {
+      color: #F6F8FA;
+    }
+
+    div.input-icons {
+      input#search {
+        background-color: #3F4448;
+        color: #F6F8FA;
+      }
+    }
   }
 
 }
+
 .navbar {
   background-color: #f3f3f3;
-  border-top: 1px solid #D1D5DA;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -55,7 +81,7 @@ section.top {
 
   /* Style the links inside the navigation bar */
   a {
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     float: left;
@@ -63,26 +89,30 @@ section.top {
     color: #353b48;
     text-decoration: none;
     font-size: 17px;
-    width: 100%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-	text-align: center;
-  }
-
-  /* Change the color of links on hover */
-  a:hover {
-    background-color: whitesmoke;
-    color: black;
+    width: 100%;
+    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center;
   }
 
   /* Add a color to the active/current link */
   a.active {
-	color: #44bd32;
-	position: relative;
+    color: #44bd32;
+    position: relative;
   }
+
   a.active::after {
-	  content: "";
-	  position: absolute;
-	  width: 100%;
-	  height: calc(100% - 3px );
-	  border-bottom: 3px solid #44bd32;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 3px);
+    border-bottom: 3px solid #44bd32;
+  }
+
+  &.dark {
+    background-color: #24292E;
+
+    a {
+      color: whitesmoke;
+    }
   }
 }

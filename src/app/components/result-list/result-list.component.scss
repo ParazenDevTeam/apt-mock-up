@@ -13,8 +13,8 @@
       height: 80px;
       box-shadow: 0 3px 7px -1px rgba(#000, .1);
       margin-bottom: 1.6%;
-      background: #24292E;
-      color: whitesmoke;
+      background: white;
+      color: #24292E;
       line-height: 1.4;
       border-radius: 5px;
       overflow: hidden;
@@ -70,4 +70,12 @@
       }
     }
   }
+
+  &.dark {
+    ul li {
+      background: #24292E;
+      color: whitesmoke;
+    }
+  }
+
 }

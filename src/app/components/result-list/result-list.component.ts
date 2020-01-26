@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-result-list',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result-list.component.scss']
 })
 export class ResultListComponent {
+
+  @Input() theme: string = 'light';
 
   products: any = [
     {
