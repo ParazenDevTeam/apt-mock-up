@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { SearchPageComponent } from './components/search-page/search-page.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
 import { TabsMenuComponent } from './components/tabs-menu/tabs-menu.component';
 
