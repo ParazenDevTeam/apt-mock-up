@@ -12,6 +12,7 @@ section.top {
   justify-content: space-between;
 
   background-color: #f3f3f3;
+  border-bottom: 1px solid #bfbfbf;
 
   i {
     margin: 0 10px;
@@ -71,6 +72,7 @@ section.top {
 }
 
 .navbar {
+  border-top: 1px solid #bfbfbf;
   background-color: #f3f3f3;
   overflow: hidden;
   position: fixed;

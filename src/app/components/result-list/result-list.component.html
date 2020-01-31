@@ -1,26 +1,29 @@
 <section id="result-list" [ngClass]="this.theme">
-  <ul>
-      <li *ngFor="let item of this.products">
-        <section class="left">
-          <img [src]="item.image">
-        </section>
-        <section class="right">
-          <div class="product-info">
-            <header>
-              <span>{{item.name}}</span>
-            </header>
-            <div class="card-body">
-              <span>{{item.price}}€</span>
-            </div>
+  <div class="item" *ngFor="let item of this.products">
+    <div class="row">
+      <div class="col first">
+        <div class="row">
+          <div class="col image-holder">
+            <img [src]="item.image">
           </div>
-          <div class="shopping-btn">
-            <button>
-              <i class="material-icons">
-                add_shopping_cart
-              </i>
-            </button>
+          <div class="col description">
+            <span>{{item.name}}</span>
+            <span>{{item.price}}€</span>
           </div>
-        </section>
-      </li>
-  </ul>
+        </div>
+        <div class="row">
+          <div class="col category">
+            <span>HOGAR > ELECTRONICA</span>
+          </div>
+        </div>
+      </div>
+      <div class="col second">
+        <button>
+          <i class="material-icons">
+            remove_red_eye
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>

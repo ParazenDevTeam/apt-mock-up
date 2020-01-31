@@ -1,81 +1,81 @@
 #result-list {
-  width: 100%;
-  height: 90%;
+  height: 100%;
+  padding: 10px 15px 0px 15px;
+  overflow-y: scroll;
 
-  ul {
-    list-style: none;
-    padding: 0px 20px;
-    height: 77.8%;
-    margin: 50px 0;
-    overflow-y: scroll;
+  div.item {
+    width: 100%;
+    padding: 5px;
+    margin: 0 0 6px 0;
+    background-color: #fdfdfd;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
 
-    li {
-      height: 80px;
-      box-shadow: 0 3px 7px -1px rgba(#000, .1);
-      margin-bottom: 1.6%;
-      background: white;
-      color: #24292E;
-      line-height: 1.4;
-      border-radius: 5px;
-      overflow: hidden;
-      z-index: 0;
+    div.row {
+      width: 100%;
       display: flex;
 
-      section {
-        &.left {
-          width: 30%;
+      div.col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      div.first {
+        width: 70%;
+
+        div.image-holder {
+          width: 45%;
+
           img {
             width: 100%;
-            height: 100%;
           }
         }
 
-        &.right {
-          width: 70%;
-          display: flex;
-          justify-content: flex-end;
+        div.description {
+          width: 55%;
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden !important;
+          text-overflow: ellipsis;
         }
-        header, div.card-body {
-          display: flex;
-          span {
-            margin: 0;
-            font-size: 18px;
-            text-align: end;
-            width: 100%;
-            margin: 5px 20px 0;
-          }
+
+        div.category {
+          width: fit-content;
+          margin-top: 6px;
+          padding: 2px 8px;
+          font-size: 12px;
+          background-color: #d6d6d6;
+          border-radius: 5px;
+          border: 1px solid #94d48b;
+          color: #197d0a;
+          user-select: none;
+          cursor: pointer;
         }
-        div.product-info {
-          margin: 5px;
-        }
-        div.shopping-btn {
+      }
+
+      div.second {
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+
+        button {
           display: flex;
           justify-content: center;
-          button {
-            background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
-            margin: 25px 15px 0 0;
-            margin: 20px 15px 0;
-            width: 60px;
-            height: 40px;
-            border-radius: 7px;
-            border-color: transparent;
-            padding: 0;
-            outline: none;
+          align-items: center;
+          padding: 5px 8px;
+          background: unset;
+          background-color: #D6D6D6;
+          border-radius: 5px;
+          border: 1px solid #bdbdbd;
+          outline: none;
+          cursor: pointer;
 
-            i {
-              color: whitesmoke;
-            }
+          i {
+            color: #353B48;
           }
         }
       }
     }
   }
-
-  &.dark {
-    ul li {
-      background: #24292E;
-      color: whitesmoke;
-    }
-  }
-
 }
