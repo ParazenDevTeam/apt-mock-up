@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ResultListComponent } from 'src/app/components/result-list/result-list.component';
+import { TabsMenuComponent } from 'src/app/components/tabs-menu/tabs-menu.component';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +11,17 @@ export class HomePageComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('searchBar', null) searchBar: TabsMenuComponent;
+  @ViewChild('resultList', null) resultList: ResultListComponent;
+
   ngOnInit() {
+  }
+
+  get hideSearchButton(): any {
+    return {
+      "hide" : this.searchBar.menuIsOpen,
+      "visible" : !this.searchBar.menuIsOpen
+    }
   }
 
 }
