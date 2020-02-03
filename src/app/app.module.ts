@@ -7,6 +7,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
 import { TabsMenuComponent } from './components/tabs-menu/tabs-menu.component';
+import { TextWrapComponent } from './components/text-wrap/text-wrap.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TabsMenuComponent } from './components/tabs-menu/tabs-menu.component';
     HomePageComponent,
     SearchPageComponent,
     ResultListComponent,
-    TabsMenuComponent
+    TabsMenuComponent,
+    TextWrapComponent
   ],
   imports: [
     BrowserModule,
