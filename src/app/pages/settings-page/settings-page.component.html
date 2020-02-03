@@ -1,8 +1,14 @@
 <app-top-menu></app-top-menu>
 <section id="settings-page">
-    <ul id="preferences">
-        <li class="preference">
-            
+    <ul class="preferences" *ngFor="let category of this.preferences">
+        <span class="head">{{category.header}}</span>
+        <li class="preference" *ngFor="let preference of category.preferences" (click)="preference.onClick()">
+            <div class="row">
+                <span>{{preference.title}}</span>
+                <i class="material-icons">
+                    {{preference.icon}}
+                </i>
+            </div>
         </li>
     </ul>
 </section>
