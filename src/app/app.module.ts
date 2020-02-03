@@ -10,6 +10,7 @@ import { TabsMenuComponent } from './components/tabs-menu/tabs-menu.component';
 import { TextWrapComponent } from './components/text-wrap/text-wrap.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TopMenuComponent } from './components/top-menu/top-menu.component';
     TabsMenuComponent,
     TextWrapComponent,
     SettingsPageComponent,
-    TopMenuComponent
+    TopMenuComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
