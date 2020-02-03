@@ -8,6 +8,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
 import { TabsMenuComponent } from './components/tabs-menu/tabs-menu.component';
 import { TextWrapComponent } from './components/text-wrap/text-wrap.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { TextWrapComponent } from './components/text-wrap/text-wrap.component';
     SearchPageComponent,
     ResultListComponent,
     TabsMenuComponent,
-    TextWrapComponent
+    TextWrapComponent,
+    SettingsPageComponent,
+    TopMenuComponent
   ],
   imports: [
     BrowserModule,

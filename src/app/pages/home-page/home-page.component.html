@@ -1,8 +1,8 @@
-<app-tabs-menu #searchBar></app-tabs-menu>
-
+<app-top-menu></app-top-menu>
 <div id="page-wrapper" [ngClass]="this.searchBar.theme">
     <app-result-list #resultList [theme]="this.searchBar.theme"></app-result-list>
     <!-- <section id="search-button" [ngClass]="this.hideSearchButton">
         <button><i class="material-icons">search</i></button>
     </section> -->
 </div>
+<app-tabs-menu #searchBar></app-tabs-menu>

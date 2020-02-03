@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,12 @@ const routes: Routes = [
     component: HomePageComponent,
     pathMatch: 'full',
     data: { title: 'Wish List', icon: 'loyalty' }
+  },
+  {
+    path: 'settings',
+    component: SettingsPageComponent,
+    pathMatch: 'full',
+    data: { title: 'Settings', icon: 'settings' }
   },
   {
     path: '**',

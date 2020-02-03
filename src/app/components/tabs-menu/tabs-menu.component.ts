@@ -12,7 +12,6 @@ export class TabsMenuComponent implements OnInit {
 
   menuIsOpen: boolean = false;
   activePage: string = '';
-  theme: string = 'light';
 
   constructor(public route: ActivatedRoute, public router: Router) {
     this.activePage = route.snapshot.url.join('');
@@ -20,13 +19,6 @@ export class TabsMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    var param = this.route.snapshot.queryParamMap.get('theme');
-    if (param != null)
-      this.theme = (param.toLowerCase() == 'dark') ? 'dark' : 'light';
-  }
-
-  toogleTheme() {
-    this.theme = (this.theme == 'dark') ? 'light' : 'dark';
   }
 
   toggle(): boolean {
