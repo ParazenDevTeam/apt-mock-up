@@ -16,12 +16,4 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  get hideSearchButton(): any {
-    return {
-      "hide" : this.searchBar.menuIsOpen,
-      "visible" : !this.searchBar.menuIsOpen
-    }
-  }
-
 }

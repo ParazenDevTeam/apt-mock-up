@@ -21,15 +21,8 @@ export class TabsMenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggle(): boolean {
-    this.menuIsOpen = !this.menuIsOpen;
-    return this.menuIsOpen;
-  }
-
   changePage(page: string) {
     this.router.navigateByUrl(page)
-    console.log(page);
-    this.toggle();
   }
 
 }

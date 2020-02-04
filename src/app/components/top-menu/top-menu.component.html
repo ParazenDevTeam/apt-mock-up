@@ -1,7 +1,21 @@
 <section class="top">
-    <div class="input-icons">
-      <i class="material-icons">search</i>
-      <input type="text" name="search" id="search" placeholder="Search for products">
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <div class="input-icons">
+          <i class="material-icons">search</i>
+          <input type="text" name="search" id="search" placeholder="Search for products">
+        </div>
+      </div>
     </div>
-    <i class="material-icons">filter_list</i>
+    <div class="row">
+      <div class="col filters">
+        <div class="row">
+          <ng-container *ngFor="let shop of this.shops">
+            <label><img [src]="this.getPhoto(shop.name)" (click)="shop.selected = !shop.selected" [className]="shop.selected ? 'selected' : ''"></label>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

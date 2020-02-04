@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
+  shops: any = [
+    { name: 'amazon', selected: false },
+    { name: 'ebay',  selected: false },
+    { name: 'aliexpress', selected: false },
+    { name: 'elcorteingles', selected: false },
+    { name: 'pccomponentes', selected: false }
+  ];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getPhoto(shop: string) {
+    return '../../../assets/img/' + shop.toLowerCase() + '-icon.png';
   }
 
 }
