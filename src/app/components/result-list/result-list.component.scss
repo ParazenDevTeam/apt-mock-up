@@ -5,13 +5,15 @@
 
   div.item {
     width: 100%;
-    margin: 0 0 6px 0;
+    height: 33%;
+    margin: 0 0 12px 0;
     background-color: #fdfdfd;
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.32);
 
     div.row {
       width: 100%;
+      height: 80%;
       display: flex;
 
       div.col {
@@ -22,6 +24,8 @@
       div.image-holder {
         width: 40%;
         padding: 5px;
+        display: flex;
+        justify-content: center;
 
         img {
           width: 100%;
@@ -30,10 +34,10 @@
 
       div.description {
         width: 60%;
-        padding: 5px;
-        background-color: #eafffc;
+        padding: 25px 15px;
+        background-color: #fdfdfd;
         border-radius: 0 5px 5px 0;
-        
+
         div.row {
           width: 100%;
           display: flex;
@@ -44,9 +48,13 @@
               margin-right: 5px;
               font-weight: 600;
               font-size: 18px;
+
+              &.best {
+                color: crimson;
+              }
             }
           }
-  
+
           div.bdtag {
             span {
               color: #ffffff;
@@ -59,34 +67,66 @@
 
           div.productname {
             width: 100%;
-            
+
             text-wrap {
               margin: 5px 0;
               font-size: 15px;
               white-space: pre-wrap;
             }
           }
+        }
 
-          div.button {
-            width: 100%;
-            display: flex;
+        div.inflate {
+          height: 100%;
+        }
+      }
+
+      &.footer {
+        height: 20%;
+
+        >div.col {
+          border-top: solid 1px #d3d3d3;
+          display: flex;
+          justify-content: center;
+        }
+
+        div.col {
+          width: 100%;
+
+          .shop {
+            padding-left: 15px;
             justify-content: center;
-            align-items: center;
 
-            button {
-              border-radius: 5px;
+            img {
+              width: 50px;
+            }
+          }
+
+          .buttons {
+            justify-content: center;
+
+            div.button {
+              width: 100%;
               display: flex;
               justify-content: center;
               align-items: center;
-              padding: 3px 0;
-              border: 1px solid #a3df9b;
-              width: 80%;
-              outline: none;
+
+              button {
+                border: none;
+                outline: none;
+                background: transparent;
+                outline: none;
+
+                &.follow {
+                  color: #44bd32;
+                }
+
+                i {
+                  font-size: 18px;
+                }
+              }
             }
           }
-        }
-        div.inflate {
-          height: 100%;
         }
       }
     }
