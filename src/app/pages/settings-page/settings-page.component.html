@@ -2,7 +2,7 @@
 <section id="settings-page">
     <ul class="preferences" *ngFor="let category of this.preferences">
         <span class="head">{{category.header}}</span>
-        <li class="preference" *ngFor="let preference of category.preferences" (click)="preference.onClick()">
+        <li class="preference" *ngFor="let preference of category.preferences" routerLink="/home">
             <div class="row">
                 <span>{{preference.title}}</span>
                 <i class="material-icons">
@@ -11,18 +11,5 @@
             </div>
         </li>
     </ul>
-    <app-pop-up>
-        <ul>
-            <li>
-                <span>hola</span>
-            </li>
-            <li>
-                <span>hola</span>
-            </li>
-            <li>
-                <span>hola</span>
-            </li>
-        </ul>
-    </app-pop-up>
 </section>
 <app-tabs-menu></app-tabs-menu>

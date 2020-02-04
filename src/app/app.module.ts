@@ -11,6 +11,7 @@ import { TextWrapComponent } from './components/text-wrap/text-wrap.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

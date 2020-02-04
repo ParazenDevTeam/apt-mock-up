@@ -1,4 +1,25 @@
-section.pop-up {
-    position: absolute;
-    z-index: 99;
+.wrapper {
+    position: fixed;
+    z-index: 102;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000042;
+    cursor: pointer;
+}
+
+.close-animation {
+    opacity: 0.5;
 }

@@ -1,45 +1,68 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-export interface PopUp  {
-  styles: Style;
-}
-
-export interface Style {
-  width?: string;
-  height?: string;
-  margin?: string;
-  padding?: string;
-  backgroundColor?: string;
-  borderRadius?: string;
-  border?: string;
-  boxShadow?: string;
-}
+import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 
 @Component({
-  selector: 'app-pop-up',
-  template: '<section class="pop-up"><ng-content></ng-content></section>',
-  styleUrls: ['./pop-up.component.scss']
+	selector: 'app-pop-up',
+	template: '<div *ngIf="this.enabled" class="wrapper" [@popUpAnim]="this.currentState"><ng-content></ng-content></div><div *ngIf="this.enabled" [@backDropAnim]="this.currentState" class="backdrop" (click)="this.close(200)"></div>',
+	styleUrls: ['./pop-up.component.scss'],
+	animations: [
+		trigger('popUpAnim', [
+			state('initial', style({
+				top: '50%'
+			})),
+			state('final', style({
+				top: '150%',
+			})),
+			transition('initial=>final', animate('200ms')),
+			transition('final=>initial', animate('200ms'))
+		]),
+		trigger('backDropAnim', [
+			state('initial', style({
+				opacity: '1'
+			})),
+			state('final', style({
+				opacity: '0',
+				pointerEvents: 'none'
+			})),
+			transition('initial=>final', animate('200ms')),
+			transition('final=>initial', animate('200ms'))
+		])
+	]
 })
 export class PopUpComponent implements OnInit {
 
-  @Input() popup: PopUp;
+	public enabled: boolean = true;
+	public currentState = 'initial';
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
-  get myStyles() {
-    return {
-      'width': this.popup.styles.width || '100%',
-      'height': this.popup.styles.height || '100%',
-      'margin': this.popup.styles.margin || '15px',
-      'padding': this.popup.styles.padding || '0',
-      'background-color': this.popup.styles.backgroundColor || 'white',
-      'border-radius': this.popup.styles.borderRadius || '8px',
-      'border': this.popup.styles.border || 'unset',
-      'box-shadow': this.popup.styles.boxShadow || '0px 2px 7px -1px rgb(160, 160, 160)',
-    }
-  }
+	changeState(state: string) {
+		this.currentState = state;
+	}
+
+	close(transitionDuration?: number): Promise<boolean> {
+		return new Promise<boolean>(
+			(res: any) => {
+				this.changeState('final');
+				setTimeout(() => {
+					this.enabled = false;
+				}, transitionDuration);
+			}
+		);
+	}
+
+	open(transitionDuration?: number): Promise<boolean> {
+		return new Promise<boolean>(
+			(res: any) => {
+				this.enabled = true;
+				setTimeout(() => {
+					this.changeState('initial');
+				}, 1);
+			}
+		);
+	}
 
 }
